@@ -1,0 +1,190 @@
+:root {
+  --navy: #1a2b4a;
+  --dark-gray: #2c3e50;
+  --medium-gray: #34495e;
+  --light-gray: #ecf0f1;
+  --accent: #3498db;
+  --text: #333;
+  --white: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: #f4f6f9;
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.cv-container {
+  max-width: 1100px;
+  margin: 40px auto;
+  background: white;
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* Sidebar */
+.sidebar {
+  background: linear-gradient(135deg, var(--navy), var(--dark-gray));
+  color: var(--white);
+  padding: 40px 40px;
+  text-align: center;
+}
+
+.profile-img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 6px solid rgba(255, 255, 255, 0.15);
+  margin-bottom: 20px;
+}
+
+.sidebar h1 {
+  font-size: 2rem;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.title {
+  font-size: 1.1rem;
+  color: var(--accent);
+  margin-bottom: 40px;
+  font-weight: 500;
+}
+
+.section {
+  margin-bottom: 35px;
+  text-align: left;
+}
+
+.section h2 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: var(--accent);
+  border-bottom: 2px solid var(--accent);
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.section p,
+.section ul {
+  font-size: 0.95rem;
+}
+
+.contact i,
+.section i {
+  margin-right: 10px;
+  color: var(--accent);
+}
+
+.contact li {
+  margin: 12px 0;
+  text-align: left;
+}
+
+.skills li,
+.languages li {
+  text-align: left;
+  margin: 10px 0;
+}
+
+/* Main Content */
+.main-content {
+  padding: 50px 45px;
+  background: var(--white);
+}
+
+.main-content h2 {
+  font-size: 1.8rem;
+  color: var(--navy);
+  margin-bottom: 30px;
+  border-bottom: 3px solid var(--accent);
+  display: inline-block;
+  padding-bottom: 8px;
+}
+
+.job {
+  margin-bottom: 28px;
+}
+
+.job h3 {
+  font-size: 1.25rem;
+  color: var(--dark-gray);
+  margin-bottom: 5px;
+}
+
+.company {
+  font-weight: 600;
+  color: var(--medium-gray);
+  font-size: 1.05rem;
+}
+
+.date {
+  color: var(--accent);
+  font-style: italic;
+  font-size: 0.95rem;
+}
+
+.job ul {
+  margin-top: 12px;
+  padding-left: 20px;
+  color: #555;
+}
+
+.job ul li {
+  margin: 8px 0;
+  position: relative;
+}
+
+.job ul li::marker {
+  color: var(--accent);
+}
+
+/* Educación */
+.edu-item h3 {
+  font-size: 1.25rem;
+  color: var(--dark-gray);
+}
+
+.edu-item .company {
+  font-weight: 600;
+  margin: 5px 0;
+}
+
+.edu-item .date {
+  font-style: italic;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .cv-container {
+    grid-template-columns: 1fr;
+  }
+  .sidebar {
+    text-align: center;
+    padding: 40px 30px;
+  }
+  .main-content {
+    padding: 40px 30px;
+  }
+}
+
+@media print {
+  body {
+    background: white;
+  }
+  .cv-container {
+    box-shadow: none;
+    margin: 0;
+  }
+}
